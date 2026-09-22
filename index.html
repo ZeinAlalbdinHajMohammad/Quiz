@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Dev Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="toast" class="toast"></div>
+    
+    <div class="card">
+      <div class="quiz-info">
+        <span id="question-count">Question 1 of 10</span>
+        <span id="live-score">Score: 0</span>
+      </div>
+      
+      <h3 id="question"></h3>
+      <div id="answers"></div>
+      <button id="next">Next Question</button>
+      <button id="restart" style="display: none;">Play Again 🔄</button>
+    </div>
+
+    <div class="history-container" id="history-container" style="display: none;">
+      <div class="history-title">Attempts History</div>
+      <div id="history-list"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

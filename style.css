@@ -1,0 +1,165 @@
+body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e1b4b, #311042);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 380px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        box-sizing: border-box;
+      }
+
+      .quiz-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        color: #64748b;
+        margin-bottom: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      h3 {
+        margin-top: 5px;
+        margin-bottom: 25px;
+        color: #1e293b;
+        font-size: 20px;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        background: #f8fafc;
+        color: #334155;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        background: #f1f5f9;
+      }
+
+      .answer:nth-of-type(1) { border-left: 5px solid #3498db; }
+      .answer:nth-of-type(2) { border-left: 5px solid #9b59b6; }
+      .answer:nth-of-type(3) { border-left: 5px solid #e67e22; }
+      .answer:nth-of-type(4) { border-left: 5px solid #2ecc71; }
+
+      .correct {
+        background: #10b981 !important;
+        color: #fff !important;
+        border-color: #10b981 !important;
+      }
+
+      .wrong {
+        background: #ef4444 !important;
+        color: #fff !important;
+        border-color: #ef4444 !important;
+      }
+
+      #next, #restart {
+        margin-top: 20px;
+        background: #4f46e5;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+      }
+      
+      #next:hover { background: #4338ca; }
+      #restart { background: #10b981; }
+      #restart:hover { background: #059669; }
+       
+      .toast {
+        visibility: hidden;
+        min-width: 220px;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 14px;
+        position: fixed;
+        z-index: 10;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s, top 0.3s;
+      }
+      .toast.success { background-color: #10b981; }
+      .toast.error { background-color: #ef4444; }
+      .toast.show {
+        visibility: visible;
+        opacity: 1;
+        top: 40px;
+      }
+
+      .history-container {
+        margin-top: 25px;
+        width: 100%;
+        max-width: 380px;
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+      }
+
+      .history-title {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        color: #94a3b8;
+      }
+
+      .history-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      @media (max-width: 400px) {
+        body {
+          padding: 12px;
+        }
+
+        .card {
+          padding: 20px;
+        }
+
+        h3 {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+
+        button {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
